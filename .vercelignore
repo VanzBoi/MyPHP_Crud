@@ -2,5 +2,5 @@ README.md
 tests/
 test-results/
 .git/
-index.php
-download.php
+/index.php
+/download.php
