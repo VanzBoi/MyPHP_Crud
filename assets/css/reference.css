@@ -1,0 +1,46 @@
+/* Screenshot-led homepage with a single download action in the navigation. */
+@font-face{font-family:Geist;font-style:normal;font-weight:100 900;font-display:swap;src:url('../vendor/geist-latin.woff2') format('woff2')}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:100 900;font-display:swap;src:url('../vendor/geist-mono-latin.woff2') format('woff2')}
+:root{--purple:#783aff;--ink:#191c1e;--line:#d9dadd}
+body{font-family:"Geist",Arial,sans-serif;color:var(--ink)}
+.reference-nav{min-height:85px;padding:20px 0;border-top:4px solid #fff9f5;border-bottom:1px solid #d1d3d6;background:var(--bs-body-bg)}
+.nav-container{position:relative;width:100%;padding:0 4.25%;display:flex;align-items:center;flex-wrap:wrap}
+.bootstrap-brand{padding:0;margin:0 13px 0 0;color:#793dff;line-height:0}
+.bootstrap-brand:hover{color:#6825ed}
+.navbar-download{padding:8px 16px;font-size:15px;line-height:22px;white-space:nowrap}
+.reference-nav .navbar-toggler{margin-left:14px}
+.primary-links{gap:6px}.primary-links .nav-link{padding:0 8px!important;font-size:18px;color:#4e545b;line-height:40px;font-weight:400}
+.docs-search{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:350px;height:43px;border:1px solid #d7d9dc;border-radius:13px;background:#f6f7f8;color:#606b77;padding:0 15px;font-size:18px;text-align:left}
+.docs-search kbd{margin-left:auto;background:white;color:#626c76;border:1px solid #e1e3e5;border-radius:6px;padding:0 5px;font-family:inherit;font-size:14px;line-height:22px}
+.icon{width:20px;height:20px;display:inline-block;fill:currentColor;flex-shrink:0;vertical-align:-.15em}
+.nav-utilities{margin-left:auto;display:flex;align-items:center;gap:18px;color:#454c53}.icon-link{color:inherit;display:inline-flex}
+.utility-button{display:flex;align-items:center;gap:8px;background:transparent;border:0;color:inherit;font-size:18px;padding:0;min-height:40px}
+.chevrons{display:inline-block;font-size:14px;line-height:8px;font-weight:400;vertical-align:middle}
+.reference-hero{padding:68px 24px 110px;min-height:calc(100svh - 85px);display:flex;justify-content:center;background-image:linear-gradient(180deg,color-mix(in oklch,white 1%,transparent),white 85%),radial-gradient(ellipse at top left,color-mix(in oklch,oklch(60% .24 240) 50%,transparent),transparent 50%),radial-gradient(ellipse at top right,color-mix(in oklch,#ffe484 50%,transparent),transparent 50%),radial-gradient(ellipse at center right,color-mix(in oklch,#712cf9 50%,transparent),transparent 50%),radial-gradient(ellipse at center left,color-mix(in oklch,oklch(60% .22 4) 50%,transparent),transparent 50%)}
+.hero-inner{width:100%;max-width:1200px}
+.security-badge{display:inline-flex;align-items:center;gap:12px;padding:10px 21px;background:#fff7d1;color:#a97400;border:1px solid #fff9e1;border-radius:30px;font-size:20px;text-decoration:none;line-height:25px}
+.security-badge:hover{background:#fff0ac;color:#855b00}
+.reference-hero h1{margin:20px auto 17px;font-size:60px;font-weight:600;line-height:1;letter-spacing:-1.5px;color:#191c1e;max-width:1000px}
+.hero-description{font-size:25px;line-height:1.5;color:#50545a;margin:0 auto;max-width:1100px;text-wrap:balance}
+.hero-description a{color:#0091ff;text-decoration-color:#8dc9ff;text-underline-offset:5px}
+.hero-actions{display:flex;justify-content:center;align-items:stretch;gap:15px;margin:28px auto 26px}
+.install-command{display:flex;align-items:center;gap:35px;padding:0 20px;background:#f7f7f8;border:1px solid #d3d4d6;border-radius:16px;min-height:58px;text-align:left}
+.install-command code{font-size:20px;color:#101214;white-space:nowrap;font-family:"Geist Mono",SFMono-Regular,Consolas,monospace}
+.install-command button{color:#242a30;background:transparent;border:0;padding:0;display:grid;place-items:center;min-width:24px;min-height:35px}
+.agents-button,.docs-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:58px;border-radius:16px;padding:12px 20px;font-size:20px;font-weight:600;line-height:1.5;white-space:nowrap;box-shadow:0 2px 4px #00000012;text-decoration:none}
+.agents-button{background:linear-gradient(#343638,#171a1c);color:#fff;border:1px solid #202326}
+.docs-button{background:linear-gradient(#8b51ff,#7033ee);border:1px solid #7634ed;color:#fff}
+.docs-button:hover{background:#6825e6;color:white}.agents-button:hover{background:#333}
+.release-links{font-size:20px;line-height:1.5;color:#5e646b;margin:0}.release-links span{padding:0 3px}.release-links a{color:inherit;text-decoration-color:#a8a9ad;text-underline-offset:5px}
+.reference-ad{width:500px;max-width:100%;margin:80px auto 0;text-align:left}
+.ad-card{display:flex;gap:16px;align-items:flex-start;padding:20px;background:#fafafa;border-radius:16px;text-decoration:none;color:#3d3d3d;font-size:17.5px;line-height:1.4}
+.ad-card:hover{color:#1b1b1b;background:#f6f6f6}.ad-card img{width:163px;height:125px;object-fit:cover;flex-shrink:0}.ad-attribution{display:block;text-align:right;margin-top:11px;color:#919191;font-size:14px;text-decoration:none}
+.copy-status{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);z-index:1100;border-radius:10px;padding:12px 20px;background:#191c1e;color:white;opacity:0;pointer-events:none;max-width:90vw;transition:opacity .2s}.copy-status.visible{opacity:1}
+.dropdown-item.active{background:#7738ed;color:white}.reference-hero .dropdown-menu{font-size:15px;padding:8px}.reference-hero .dropdown-item{padding:8px 12px}
+[data-bs-theme=dark] .reference-hero{background-image:linear-gradient(180deg,transparent,var(--bs-body-bg) 85%),radial-gradient(ellipse at top left,#164976,transparent 50%),radial-gradient(ellipse at top right,#4d4218,transparent 50%),radial-gradient(ellipse at center right,#442b6b,transparent 50%),radial-gradient(ellipse at center left,#50273e,transparent 50%)}
+[data-bs-theme=dark] .reference-hero h1{color:#f2f2f3}[data-bs-theme=dark] .hero-description,[data-bs-theme=dark] .release-links,[data-bs-theme=dark] .primary-links .nav-link,[data-bs-theme=dark] .nav-utilities{color:#b9bdc4}[data-bs-theme=dark] .reference-nav{border-color:#3b3640}[data-bs-theme=dark] .docs-search,[data-bs-theme=dark] .install-command,[data-bs-theme=dark] .ad-card{background:#292b31;border-color:#4a4c51;color:#ddd}[data-bs-theme=dark] .install-command code,[data-bs-theme=dark] .install-command button{color:#eee}[data-bs-theme=dark] .docs-search kbd{background:#383b42;color:#ddd;border-color:#555}
+@media(min-width:992px) and (max-height:850px){.reference-hero{padding-top:45px;padding-bottom:65px}.reference-ad{margin-top:55px}}
+@media(min-width:992px) and (max-width:1250px){.docs-search{width:270px;left:55%}.nav-container{padding-inline:3%}.primary-links .nav-link{font-size:16px}.nav-utilities{gap:12px}.reference-hero h1{font-size:54px}.hero-description{font-size:23px}}
+@media(max-width:991px){.reference-nav{padding:14px 0;min-height:72px}.nav-container{justify-content:space-between}.bootstrap-brand{margin:0}.primary-links{padding:12px 0}.primary-links .nav-link{padding:2px 0!important}.docs-search{position:static;transform:none;width:100%;margin-bottom:16px}.nav-utilities{margin:0;justify-content:flex-end;padding:5px 0}.reference-hero{padding:48px 24px 65px;min-height:calc(100svh - 72px)}.reference-hero h1{font-size:48px;line-height:1.05}.hero-description{font-size:21px}.hero-actions{flex-wrap:wrap;max-width:650px}.install-command{justify-content:space-between;width:100%}.reference-ad{margin-top:60px}}
+@media(max-width:575px){.reference-hero{padding:35px 18px 50px}.security-badge{font-size:14px;padding:9px 15px;gap:8px}.reference-hero h1{font-size:39px;letter-spacing:-1px;margin-top:25px}.desktop-break{display:none}.hero-description{font-size:18px;line-height:1.5}.hero-actions{gap:10px;margin-top:25px}.install-command{padding:0 13px;gap:8px;min-height:54px;border-radius:12px}.install-command code{font-size:15px}.agents-button,.docs-button{font-size:16px;min-height:52px;padding:10px 14px;border-radius:12px}.release-links{font-size:15px;line-height:1.9;max-width:320px;margin:auto}.reference-ad{margin-top:45px}.ad-card{padding:14px;gap:12px;font-size:14px;border-radius:12px}.ad-card img{width:130px;height:100px}.ad-attribution{font-size:12px}.hero-actions>.dropdown{display:flex}.hero-actions .icon{width:17px;height:17px}}
+@media(max-width:360px){.install-command{padding-inline:10px;gap:4px}.install-command code{font-size:12px}.ad-card{font-size:12px}.ad-card img{width:110px;height:auto}}

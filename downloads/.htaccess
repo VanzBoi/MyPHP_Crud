@@ -1,0 +1,8 @@
+Options -Indexes
+<IfModule mod_headers.c>
+  <FilesMatch "\.zip$">
+    Header set Content-Disposition "attachment"
+    Header set X-Content-Type-Options "nosniff"
+  </FilesMatch>
+</IfModule>
+AddType application/zip .zip
